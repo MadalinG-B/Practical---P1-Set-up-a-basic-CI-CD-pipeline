@@ -56,6 +56,9 @@ jobs:
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
+      
+      - name: Test with dotnet
+        run: dotnet test --configuration Release
 
       - name: dotnet publish
         run: dotnet publish src/Practical1.Web/Practical1.Web.csproj -c Release -o ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp
